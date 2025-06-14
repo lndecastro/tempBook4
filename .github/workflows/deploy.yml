@@ -23,11 +23,11 @@ jobs:
           pip install --upgrade pip
           pip install jupyter-book ghp-import
 
-      - name: Build Jupyter Book
+      - name: Build Jupyter Book # Change this to new repo name
         run: |
           cd tempBook4
           jupyter-book build .
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages # Change this to new repo name
         run: |
           ghp-import -n -p -f tempBook4/_build/html
